@@ -15,3 +15,8 @@ http://2013.confitura.pl/
 Others:
 
 https://www.thalmic.com/en/myo/
+
+
+http://download-software.intel.com/sites/default/files/m/d/4/1/d/8/219349_threadingmethodology.pdf
+
+http://www.intel.com/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-optimization-manual.pdf
