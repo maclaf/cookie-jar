@@ -34,4 +34,5 @@ http://lmax-exchange.github.io/disruptor/
 
 Smart GWT:
 
-http://www.smartclient.com/smartgwtee/javadoc/
+http://www.smartclient.com/smartgwtee/javadoc/ - RPCManager.setActionURL("[ISOMORPHIC]/IDACall?");
+
