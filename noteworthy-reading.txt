@@ -36,3 +36,20 @@ Smart GWT:
 
 http://www.smartclient.com/smartgwtee/javadoc/ - RPCManager.setActionURL("[ISOMORPHIC]/IDACall?");
 
+
+setup : function(ed) {
+			ed.onBeforeSetContent.add(function(ed, o) {
+				if (o.format == 'raw')
+					return;
+				o.content = '<table><tr><td>' + o.content + '</td></tr></table>';
+			});
+
+			ed.onGetContent.add(function(ed, o) {
+				var tpl = ed.dom.get();
+				if(tpl !== null){
+					o.content = tpl.innerHTML;
+				}
+			});
+
+		},
+
