@@ -38,3 +38,8 @@ http://lmax-exchange.github.io/disruptor/
 Smart GWT:
 
 http://www.smartclient.com/smartgwtee/javadoc/
+
+
+Architecture:
+
+4+1 view architecture
