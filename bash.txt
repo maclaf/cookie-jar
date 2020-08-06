@@ -1,2 +1,5 @@
 # find all iml files and remove it recursevly 
 find . -name '*.iml' -exec rm -rfv {} \ 
+
+#one liner loop
+for i in *; do echo $i; done
