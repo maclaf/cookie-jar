@@ -3,6 +3,21 @@ What I learned today
 # 15.07.2021
 It's better to use [distroless](https://github.com/GoogleContainerTools/distroless) docker image instead of alpine because of security reasons (no shell as it is for alpine/ubuntu/general linux image)
 
+# 16.07.2021
+Removing annotation or label on some resource is done by following syntax:
+```kubectl annotate <resource> <resource-name> myannotation-```
+For example:
+```
+$ POD=nginx-68dc96bdb6-xrrxk
+$ kubectl annotate pod $POD myannotation='123'
+$ kubectl get pod $POD -o custom-columns=myannotation:{.metadata.annotations.myannotation}
+myannotation
+123
+$ kubectl annotate pod $POD myannotation-
+pod/nginx-68dc96bdb6-xrrxk annotated
+$ kubectl get pod $POD -o custom-columns=myannotation:{.metadata.annotations.myannotation}
+```
+
 # 19.07.2021
 When trying to modify kubernetes deployment, you can find possible values for given field by invoking ```kubectl explain <api-resource>...``` 
 ```
