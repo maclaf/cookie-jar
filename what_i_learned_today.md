@@ -55,3 +55,10 @@ bash: MY_VARIABLE: readonly variable
 $ echo $MY_VARIABLE
 123
 ```
+# 31.08.2021
+Azure container registry does not show helm repository content from web console properly. This is misleading, as you might think ecr repository is empty. 
+To list available charts in such repository you can do following:
+```
+helm repo add yourecr 'https://yourecr.azurecr.io/helm/v1/repo' --password <password> --username <username>
+helm search repo yourecr
+```
