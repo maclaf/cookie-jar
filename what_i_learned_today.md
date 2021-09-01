@@ -62,3 +62,21 @@ To list available charts in such repository you can do following:
 helm repo add yourecr 'https://yourecr.azurecr.io/helm/v1/repo' --password <password> --username <username>
 helm search repo yourecr
 ```
+
+# 01.09.2021
+When trying to apply terraform resource on minikube: 
+```
+"helm_release" "my-release"{
+..
+}
+```
+./terraform-0.14.11 apply -var-file tfvars.tfvars 
+
+and you get following error:
+```
+Error: Kubernetes cluster unreachable: invalid configuration: no configuration has been provided, try setting KUBERNETES_MASTER environment variable
+```
+if could be fixed by invoking:
+```
+export KUBE_CONFIG_PATH=~/.kube/config
+```
