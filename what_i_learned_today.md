@@ -80,3 +80,15 @@ if could be fixed by invoking:
 ```
 export KUBE_CONFIG_PATH=~/.kube/config
 ```
+
+# 24.09.2021
+
+minikube caches docker images somwhere else than docker itself. It means removing docker by:
+```
+docker image rm <hash>
+```
+does not affect minikube.
+To get rid of minikube cached image you need to invoke:
+```
+minikube image rm <image-name>
+```
