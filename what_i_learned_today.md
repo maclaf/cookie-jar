@@ -83,7 +83,7 @@ export KUBE_CONFIG_PATH=~/.kube/config
 
 # 24.09.2021
 
-minikube caches docker images somwhere else than docker itself. It means removing docker by:
+Minikube caches docker images somwhere else than docker itself. So if you develop docker image locally and and push changes to remote server, you could do not have latest version as kubectl events reports "container image <image-name> already present on machine". Removing docker image by:
 ```
 docker image rm <hash>
 ```
