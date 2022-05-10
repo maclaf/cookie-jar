@@ -92,3 +92,10 @@ To get rid of minikube cached image you need to invoke:
 ```
 minikube image rm <image-name>
 ```
+
+# 10.05.2022
+Most usefull security related websites 
+CWE - Common Weeknes Enumeration
+CAPEC - Common Attack Pattern Enumeration and Classification
+ATT&CK 
+NVD - National Vulnerability Database
