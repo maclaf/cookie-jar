@@ -103,10 +103,18 @@ Most usefull security related websites
 # 14.07.2022
 test docker with pgsql:
 1. run docker with pgsql:
-     ```docker run -e POSTGRES_PASSWORD=qqq -e POSTGRES_USER=qqq postgres```
+     ```
+     docker run -e POSTGRES_PASSWORD=qqq -e POSTGRES_USER=qqq postgres
+     ```
 2. connect psql to that docker:
-     ```docker inspect --format='{{json .NetworkSettings.Networks}}' 3442a07ff11f
-{"bridge":{"IPAMConfig":null,"Links":null,"Aliases":null,"NetworkID":"06c38a8d5d2a22d6836a9a221581904bd75a799f737501aa4424539a1fcfa0b3","EndpointID":"322b1eea628768b6e459924e72b61158a9c2c464c9cf8a8d828a08a680bb3687","Gateway":"172.17.0.1","IPAddress":"172.17.0.3","IPPrefixLen":16,"IPv6Gateway":"","GlobalIPv6Address":"","GlobalIPv6PrefixLen":0,"MacAddress":"02:42:ac:11:00:03","DriverOpts":null}}
-     docker run -it --rm --network bridge postgres psql -h 172.17.0.3 -U qqq```
+     a. inspect network setting for created docker container:
+     ```
+     docker inspect --format='{{json .NetworkSettings.Networks}}' 3442a07ff11f
+     {"bridge":{"IPAMConfig":null,"Links":null,"Aliases":null,"NetworkID":"06c38a8d5d2a22d6836a9a221581904bd75a799f737501aa4424539a1fcfa0b3","EndpointID":"322b1eea628768b6e459924e72b61158a9c2c464c9cf8a8d828a08a680bb3687","Gateway":"172.17.0.1","IPAddress":"172.17.0.3","IPPrefixLen":16,"IPv6Gateway":"","GlobalIPv6Address":"","GlobalIPv6PrefixLen":0,"MacAddress":"02:42:ac:11:00:03","DriverOpts":null}}
+     ```
+     b. connect using data above 
+     ```
+     docker run -it --rm --network bridge postgres psql -h 172.17.0.3 -U qqq
+     ```
      
      
