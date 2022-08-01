@@ -118,3 +118,17 @@ test docker with pgsql:
      ```
      
      
+# 01.08.2022
+Very usefull method in Map is map.merge which allows to get rid off if hell:
+```
+ var prev = map.get(word);
+if (prev == null) {
+   map.put(word, 1);
+} else {
+   map.put(word, prev + 1);
+}
+```
+instead of that you write:
+```
+map.merge(word, 1, (prev, one) -> prev + one)
+```
