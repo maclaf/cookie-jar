@@ -132,3 +132,10 @@ instead of that you write:
 ```
 map.merge(word, 1, (prev, one) -> prev + one)
 ```
+     
+# 02.08.2022
+List of requirements for secure developement from OWASP: https://owasp.org/www-project-application-security-verification-standard/
+     
+PCI security standards: https://www.pcisecuritystandards.org/merchants/
+
+Common criteria portal: https://www.commoncriteriaportal.org/cc/
