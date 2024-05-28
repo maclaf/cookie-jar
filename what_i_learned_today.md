@@ -139,3 +139,6 @@ List of requirements for secure developement from OWASP: https://owasp.org/www-p
 PCI security standards: https://www.pcisecuritystandards.org/merchants/
 
 Common criteria portal: https://www.commoncriteriaportal.org/cc/
+
+# 28.05.2024
+For fully automated installs it is worth to check: https://fai-project.org/
